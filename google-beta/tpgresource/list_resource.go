@@ -130,7 +130,7 @@ func (listR *ListResourceMetadata) Defaults(request resource.ConfigureRequest, r
 
 	c, ok := request.ProviderData.(*transport_tpg.Config)
 	if !ok {
-		response.Diagnostics.AddError("Client Provider Data Error", "invalid provider data supplied")
+		response.Diagnostics.AddError("Client Data Error", "invalid provider data supplied")
 		return
 	}
 
