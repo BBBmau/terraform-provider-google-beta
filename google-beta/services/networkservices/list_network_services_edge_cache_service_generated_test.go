@@ -41,6 +41,7 @@ func TestAccNetworkServicesEdgeCacheServiceListQuery_generated(t *testing.T) {
 	randomSuffix := acctest.RandString(t, 10)
 	context := map[string]interface{}{
 		"bucket_name":   "tf-test-my-bucket" + randomSuffix,
+		"location":      "global",
 		"origin_name":   "tf-test-my-origin" + randomSuffix,
 		"service_name":  "tf-test-my-service" + randomSuffix,
 		"project":       envvar.GetTestProjectFromEnv(),

@@ -40,6 +40,7 @@ func TestAccNetworkServicesEdgeCacheKeysetListQuery_generated(t *testing.T) {
 
 	randomSuffix := acctest.RandString(t, 10)
 	context := map[string]interface{}{
+		"location":      "global",
 		"resource_name": "tf-test-my-keyset" + randomSuffix,
 		"project":       envvar.GetTestProjectFromEnv(),
 		"random_suffix": randomSuffix,

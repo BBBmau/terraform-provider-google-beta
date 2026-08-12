@@ -161,6 +161,11 @@ func ListNetworkServicesGrpcRoutes(config *transport_tpg.Config,
 		Flattener: func(res map[string]interface{}, d *schema.ResourceData, config *transport_tpg.Config) error {
 			headers := make(http.Header)
 			var err error
+			if v, ok := res["name"]; ok && v != nil {
+				if err := d.Set("name", v); err != nil {
+					return fmt.Errorf("error setting name: %w", err)
+				}
+			}
 			if v, ok := res["location"]; ok && v != nil {
 				if err := d.Set("location", v); err != nil {
 					return fmt.Errorf("error setting location: %w", err)

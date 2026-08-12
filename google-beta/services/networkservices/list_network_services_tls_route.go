@@ -166,6 +166,11 @@ func ListNetworkServicesTlsRoutes(config *transport_tpg.Config,
 					return fmt.Errorf("error setting name: %w", err)
 				}
 			}
+			if v, ok := res["name"]; ok && v != nil {
+				if err := d.Set("name", v); err != nil {
+					return fmt.Errorf("error setting name: %w", err)
+				}
+			}
 			if v, ok := res["location"]; ok && v != nil {
 				if err := d.Set("location", v); err != nil {
 					return fmt.Errorf("error setting location: %w", err)

@@ -152,6 +152,11 @@ func ListNetworkServicesEdgeCacheKeysets(config *transport_tpg.Config,
 					return fmt.Errorf("error setting name: %w", err)
 				}
 			}
+			if v, ok := res["name"]; ok && v != nil {
+				if err := d.Set("name", v); err != nil {
+					return fmt.Errorf("error setting name: %w", err)
+				}
+			}
 			if err = ResourceNetworkServicesEdgeCacheKeysetFlatten(d, config, res, config, project, userAgent, billingProject, url, headers); err != nil {
 				return err
 			}
