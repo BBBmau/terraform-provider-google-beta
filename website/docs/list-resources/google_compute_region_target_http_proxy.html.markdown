@@ -34,7 +34,7 @@ list "google_compute_region_target_http_proxy" "all" {
 
   config {
     region = "..." # Optional
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -45,7 +45,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 * `region` - (Optional) The Region in which the created target https proxy should reside.
 If it is not provided, the provider region is used.
 
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

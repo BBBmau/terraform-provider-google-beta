@@ -30,6 +30,7 @@ import (
 
 	"github.com/hashicorp/terraform-provider-google-beta/google-beta/acctest"
 	"github.com/hashicorp/terraform-provider-google-beta/google-beta/envvar"
+	_ "github.com/hashicorp/terraform-provider-google-beta/google-beta/services/compute"
 )
 
 var (
@@ -71,6 +72,7 @@ func TestAccOracleDatabaseCloudVmClusterListQuery_generated(t *testing.T) {
 					),
 					listScope.Capture(map[string]string{
 						"location": "google_oracle_database_cloud_vm_cluster.my_vmcluster",
+						"project":  "google_oracle_database_cloud_vm_cluster.my_vmcluster",
 					}),
 				),
 			},
@@ -94,11 +96,13 @@ func TestAccOracleDatabaseCloudVmClusterListQuery_generated(t *testing.T) {
 func testAccOracleDatabaseCloudVmCluster_oracledatabaseCloudVmclusterBasicExampleListQuery(context map[string]interface{}) string {
 	return acctest.Nprintf(`
 variable "location" { type = string }
+variable "project" { type = string }
 list "google_oracle_database_cloud_vm_cluster" "list_query" {
     provider = google
 	limit = 10000
     config {
         location = var.location
+        project = var.project
     }
 }
 `, context)

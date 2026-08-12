@@ -33,7 +33,7 @@ list "google_compute_machine_image" "all" {
   provider = google-beta
 
   config {
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -41,7 +41,7 @@ list "google_compute_machine_image" "all" {
 Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

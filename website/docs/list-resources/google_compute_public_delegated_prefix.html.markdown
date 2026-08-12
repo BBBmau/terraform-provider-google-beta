@@ -34,7 +34,7 @@ list "google_compute_public_delegated_prefix" "all" {
 
   config {
     region = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -43,7 +43,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
 * `region` - (Required) A region where the prefix will reside.
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

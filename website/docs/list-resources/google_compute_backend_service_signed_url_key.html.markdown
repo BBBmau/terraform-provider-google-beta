@@ -34,7 +34,7 @@ list "google_compute_backend_service_signed_url_key" "all" {
 
   config {
     backend_service = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -44,7 +44,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 ## Configuration (`config` block)
 * `backend_service` - (Required) The backend service this signed URL key belongs.
 
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

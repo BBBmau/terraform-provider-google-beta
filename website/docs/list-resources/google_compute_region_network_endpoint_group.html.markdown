@@ -34,7 +34,7 @@ list "google_compute_region_network_endpoint_group" "all" {
 
   config {
     region = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -44,7 +44,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 ## Configuration (`config` block)
 * `region` - (Required) A reference to the region where the regional NEGs reside.
 
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

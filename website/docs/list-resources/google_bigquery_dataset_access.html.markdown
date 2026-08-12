@@ -34,7 +34,7 @@ list "google_bigquery_dataset_access" "all" {
 
   config {
     dataset_id = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -46,7 +46,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 must contain only letters (a-z, A-Z), numbers (0-9), or
 underscores (_). The maximum length is 1,024 characters.
 
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

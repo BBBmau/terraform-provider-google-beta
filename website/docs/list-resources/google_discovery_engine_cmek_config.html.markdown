@@ -34,7 +34,7 @@ list "google_discovery_engine_cmek_config" "all" {
 
   config {
     location = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -45,7 +45,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 * `location` - (Required) The geographic location where the CMEK config should reside. The value can
 only be one of "us" and "eu".
 
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

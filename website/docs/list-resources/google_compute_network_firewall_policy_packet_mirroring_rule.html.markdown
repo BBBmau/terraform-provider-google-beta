@@ -34,7 +34,7 @@ list "google_compute_network_firewall_policy_packet_mirroring_rule" "all" {
 
   config {
     firewall_policy = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -44,7 +44,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 ## Configuration (`config` block)
 * `firewall_policy` - (Required) The firewall policy of the resource.
 
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

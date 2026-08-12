@@ -34,7 +34,7 @@ list "google_compute_instant_snapshot" "all" {
 
   config {
     zone = "..." # Optional
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -43,7 +43,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
 * `zone` - (Optional) A reference to the zone where the disk is located.
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

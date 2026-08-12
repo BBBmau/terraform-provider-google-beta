@@ -34,7 +34,7 @@ list "google_compute_region_composite_health_check" "all" {
 
   config {
     region = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -44,7 +44,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 ## Configuration (`config` block)
 * `region` - (Required) URL of the region where the composite health check resides.
 
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

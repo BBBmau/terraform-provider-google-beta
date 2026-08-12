@@ -33,7 +33,7 @@ list "google_compute_interconnect_attachment_group" "all" {
   provider = google
 
   config {
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -41,7 +41,7 @@ list "google_compute_interconnect_attachment_group" "all" {
 Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

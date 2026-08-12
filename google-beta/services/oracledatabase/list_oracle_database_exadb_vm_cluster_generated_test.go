@@ -74,6 +74,7 @@ func TestAccOracleDatabaseExadbVmClusterListQuery_generated(t *testing.T) {
 					),
 					listScope.Capture(map[string]string{
 						"location": "google_oracle_database_exadb_vm_cluster.my_exadb_vm_cluster",
+						"project":  "google_oracle_database_exadb_vm_cluster.my_exadb_vm_cluster",
 					}),
 				),
 			},
@@ -97,11 +98,13 @@ func TestAccOracleDatabaseExadbVmClusterListQuery_generated(t *testing.T) {
 func testAccOracleDatabaseExadbVmCluster_oracledatabaseExadbVmClusterBasicExampleListQuery(context map[string]interface{}) string {
 	return acctest.Nprintf(`
 variable "location" { type = string }
+variable "project" { type = string }
 list "google_oracle_database_exadb_vm_cluster" "list_query" {
     provider = google
 	limit = 10000
     config {
         location = var.location
+        project = var.project
     }
 }
 `, context)

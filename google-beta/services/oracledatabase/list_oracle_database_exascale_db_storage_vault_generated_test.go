@@ -70,6 +70,7 @@ func TestAccOracleDatabaseExascaleDbStorageVaultListQuery_generated(t *testing.T
 					),
 					listScope.Capture(map[string]string{
 						"location": "google_oracle_database_exascale_db_storage_vault.my_storage_vault",
+						"project":  "google_oracle_database_exascale_db_storage_vault.my_storage_vault",
 					}),
 				),
 			},
@@ -93,11 +94,13 @@ func TestAccOracleDatabaseExascaleDbStorageVaultListQuery_generated(t *testing.T
 func testAccOracleDatabaseExascaleDbStorageVault_oracledatabaseExascaleDbStorageVaultBasicExampleListQuery(context map[string]interface{}) string {
 	return acctest.Nprintf(`
 variable "location" { type = string }
+variable "project" { type = string }
 list "google_oracle_database_exascale_db_storage_vault" "list_query" {
     provider = google
 	limit = 10000
     config {
         location = var.location
+        project = var.project
     }
 }
 `, context)

@@ -30,6 +30,7 @@ import (
 
 	"github.com/hashicorp/terraform-provider-google-beta/google-beta/acctest"
 	"github.com/hashicorp/terraform-provider-google-beta/google-beta/envvar"
+	_ "github.com/hashicorp/terraform-provider-google-beta/google-beta/services/compute"
 )
 
 var (
@@ -70,6 +71,7 @@ func TestAccOracleDatabaseOdbNetworkListQuery_generated(t *testing.T) {
 					),
 					listScope.Capture(map[string]string{
 						"location": "google_oracle_database_odb_network.my-odbnetwork",
+						"project":  "google_oracle_database_odb_network.my-odbnetwork",
 					}),
 				),
 			},
@@ -93,11 +95,13 @@ func TestAccOracleDatabaseOdbNetworkListQuery_generated(t *testing.T) {
 func testAccOracleDatabaseOdbNetwork_oracledatabaseOdbnetworkBasicExampleListQuery(context map[string]interface{}) string {
 	return acctest.Nprintf(`
 variable "location" { type = string }
+variable "project" { type = string }
 list "google_oracle_database_odb_network" "list_query" {
     provider = google
 	limit = 10000
     config {
         location = var.location
+        project = var.project
     }
 }
 `, context)

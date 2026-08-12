@@ -34,7 +34,7 @@ list "google_cloud_run_service" "all" {
 
   config {
     location = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -43,7 +43,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
 * `location` - (Required) The location of the cloud run instance. eg us-central1
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

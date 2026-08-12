@@ -33,7 +33,7 @@ list "google_compute_cross_site_network" "all" {
   provider = google
 
   config {
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -41,7 +41,7 @@ list "google_compute_cross_site_network" "all" {
 Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

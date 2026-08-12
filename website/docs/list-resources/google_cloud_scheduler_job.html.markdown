@@ -34,7 +34,7 @@ list "google_cloud_scheduler_job" "all" {
 
   config {
     region = "..." # Optional
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -44,7 +44,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 ## Configuration (`config` block)
 * `region` - (Optional) Region where the scheduler job resides. If it is not provided, Terraform will use the provider default.
 
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

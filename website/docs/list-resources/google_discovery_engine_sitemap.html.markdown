@@ -35,7 +35,7 @@ list "google_discovery_engine_sitemap" "all" {
   config {
     location = "..."
     data_store_id = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -48,7 +48,7 @@ only be one of "global", "us" and "eu".
 
 * `data_store_id` - (Required) The unique id of the data store.
 
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

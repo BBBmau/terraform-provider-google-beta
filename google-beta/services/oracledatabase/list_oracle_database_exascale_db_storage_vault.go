@@ -56,7 +56,7 @@ func NewOracleDatabaseExascaleDbStorageVaultListResource() list.ListResource {
 	listR.SDKv2Resource = ResourceOracleDatabaseExascaleDbStorageVault()
 	listR.ListConfigFields = []tpgresource.ListConfigField{
 		{Name: "location", Kind: tpgresource.ListConfigKindString, Optional: false},
-		{Name: "project", Kind: tpgresource.ListConfigKindString, Optional: true},
+		{Name: "project", Kind: tpgresource.ListConfigKindString, Optional: false},
 	}
 	return listR
 }

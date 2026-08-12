@@ -34,7 +34,7 @@ list "google_sql_database" "all" {
 
   config {
     instance = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -45,7 +45,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 * `instance` - (Required) The name of the Cloud SQL instance. This does not include the project
 ID.
 
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

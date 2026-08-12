@@ -34,7 +34,7 @@ list "google_oracle_database_exascale_db_storage_vault" "all" {
 
   config {
     location = "..."
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -43,7 +43,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
 * `location` - (Required) Resource ID segment making up resource `name`. It identifies the resource within its parent collection as described in https://google.aip.dev/122.
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 

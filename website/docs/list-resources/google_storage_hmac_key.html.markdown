@@ -33,7 +33,7 @@ list "google_storage_hmac_key" "all" {
   provider = google
 
   config {
-    project = "..." # Optional
+    project = "..."
   }
 }
 ```
@@ -41,7 +41,7 @@ list "google_storage_hmac_key" "all" {
 Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
-* `project` - (Optional)
+* `project` - (Required)
 
 ## Results
 
