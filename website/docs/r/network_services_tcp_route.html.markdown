@@ -246,10 +246,6 @@ The following arguments are supported:
   (Required)
   Name of the TcpRoute resource.
 
-* `location` -
-  (Required)
-  Location (region) of the TcpRoute resource. Only the value 'global' is currently allowed.
-
 
 * `labels` -
   (Optional)

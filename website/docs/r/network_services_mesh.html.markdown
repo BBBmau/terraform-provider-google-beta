@@ -86,10 +86,6 @@ resource "google_network_services_mesh" "default" {
 The following arguments are supported:
 
 
-* `location` -
-  (Required)
-  Location (region) of the Mesh resource to be created. Only the value 'global' is currently allowed; defaults to 'global' if omitted.
-
 * `name` -
   (Required)
   Short name of the Mesh resource to be created.
@@ -112,6 +108,10 @@ The following arguments are supported:
   be redirected to this port regardless of its actual ip:port destination. If unset, a port
   '15001' is used as the interception port. This will is applicable only for sidecar proxy
   deployments.
+
+* `location` -
+  (Optional)
+  Location (region) of the Mesh resource to be created. Only the value 'global' is currently allowed; defaults to 'global' if omitted.
 
 * `project` - (Optional) The ID of the project in which the resource belongs.
     If it is not provided, the provider project is used.
@@ -170,7 +170,7 @@ In Terraform v1.12.0 and later, use an [`identity` block](https://developer.hash
 ```tf
 import {
   identity = {
-    location = "<-required value->"
+    location = "<-optional value->"
     name = "<-required value->"
     project = "<-optional value->"
   }

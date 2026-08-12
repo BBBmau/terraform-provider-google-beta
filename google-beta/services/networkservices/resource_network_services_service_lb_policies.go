@@ -146,7 +146,6 @@ func ResourceNetworkServicesServiceLbPolicies() *schema.Resource {
 				Type:        schema.TypeString,
 				Required:    true,
 				Description: `The location of the service lb policy.`,
-				Default:     "global",
 			},
 			"name": {
 				Type:        schema.TypeString,

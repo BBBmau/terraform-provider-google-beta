@@ -63,7 +63,6 @@ func TestAccNetworkServicesEdgeCacheService_networkServicesEdgeCacheServiceBasic
 
 	context := map[string]interface{}{
 		"bucket_name":   "tf-test-my-bucket" + randomSuffix,
-		"location":      "global",
 		"origin_name":   "tf-test-my-origin" + randomSuffix,
 		"service_name":  "tf-test-my-service" + randomSuffix,
 		"random_suffix": randomSuffix,
@@ -81,7 +80,7 @@ func TestAccNetworkServicesEdgeCacheService_networkServicesEdgeCacheServiceBasic
 				ResourceName:            "google_network_services_edge_cache_service.instance",
 				ImportState:             true,
 				ImportStateVerify:       true,
-				ImportStateVerifyIgnore: []string{"labels", "location", "name", "terraform_labels"},
+				ImportStateVerifyIgnore: []string{"labels", "name", "terraform_labels"},
 			},
 			{
 				ResourceName:       "google_network_services_edge_cache_service.instance",
@@ -173,7 +172,7 @@ func TestAccNetworkServicesEdgeCacheService_networkServicesEdgeCacheServiceAdvan
 				ResourceName:            "google_network_services_edge_cache_service.instance",
 				ImportState:             true,
 				ImportStateVerify:       true,
-				ImportStateVerifyIgnore: []string{"labels", "location", "name", "terraform_labels"},
+				ImportStateVerifyIgnore: []string{"labels", "name", "terraform_labels"},
 			},
 			{
 				ResourceName:       "google_network_services_edge_cache_service.instance",
@@ -399,7 +398,7 @@ func TestAccNetworkServicesEdgeCacheService_networkServicesEdgeCacheServiceDualT
 				ResourceName:            "google_network_services_edge_cache_service.instance",
 				ImportState:             true,
 				ImportStateVerify:       true,
-				ImportStateVerifyIgnore: []string{"labels", "location", "name", "terraform_labels"},
+				ImportStateVerifyIgnore: []string{"labels", "name", "terraform_labels"},
 			},
 			{
 				ResourceName:       "google_network_services_edge_cache_service.instance",

@@ -194,10 +194,6 @@ The following arguments are supported:
   Rules that define how traffic is routed and handled.
   Structure is [documented below](#nested_rules).
 
-* `location` -
-  (Required)
-  Location (region) of the GRPCRoute resource to be created. Only the value 'global' is currently allowed; defaults to 'global' if omitted.
-
 * `name` -
   (Required)
   Name of the GrpcRoute resource.
@@ -220,6 +216,10 @@ The following arguments are supported:
 * `gateways` -
   (Optional)
   List of gateways this GrpcRoute is attached to, as one of the routing rules to route the requests served by the gateway.
+
+* `location` -
+  (Optional)
+  Location (region) of the GRPCRoute resource to be created. Only the value 'global' is currently allowed; defaults to 'global' if omitted.
 
 * `project` - (Optional) The ID of the project in which the resource belongs.
     If it is not provided, the provider project is used.
@@ -410,7 +410,7 @@ In Terraform v1.12.0 and later, use an [`identity` block](https://developer.hash
 ```tf
 import {
   identity = {
-    location = "<-required value->"
+    location = "<-optional value->"
     name = "<-required value->"
     project = "<-optional value->"
   }

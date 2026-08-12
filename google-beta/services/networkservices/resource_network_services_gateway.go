@@ -251,7 +251,7 @@ func ResourceNetworkServicesGateway() *schema.Resource {
 					},
 					"location": {
 						Type:              schema.TypeString,
-						RequiredForImport: true,
+						OptionalForImport: true,
 					},
 					"project": {
 						Type:              schema.TypeString,
@@ -265,13 +265,6 @@ func ResourceNetworkServicesGateway() *schema.Resource {
 		},
 
 		Schema: map[string]*schema.Schema{
-			"location": {
-				Type:     schema.TypeString,
-				Required: true,
-				Description: `The location of the gateway.
-The default value is 'global'.`,
-				Default: "global",
-			},
 			"name": {
 				Type:        schema.TypeString,
 				Required:    true,
@@ -360,6 +353,13 @@ This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.`,
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.`,
 				Elem: &schema.Schema{Type: schema.TypeString},
+			},
+			"location": {
+				Type:     schema.TypeString,
+				Optional: true,
+				Description: `The location of the gateway.
+The default value is 'global'.`,
+				Default: "global",
 			},
 			"network": {
 				Type:     schema.TypeString,
