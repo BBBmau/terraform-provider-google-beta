@@ -1008,7 +1008,6 @@ func resourceDialogflowCXTestCaseUpdate(d *schema.ResourceData, meta interface{}
 	if err != nil {
 		return err
 	}
-
 	// extract location from the parent
 	location := ""
 

@@ -1507,7 +1507,6 @@ func resourceAlloydbClusterUpdate(d *schema.ResourceData, meta interface{}) erro
 	if err != nil {
 		return err
 	}
-
 	// Implementation for cluster upgrade
 	if d.HasChange("database_version") && !tpgresource.IsEmptyValue(reflect.ValueOf(d.Get("database_version"))) {
 		upgradeUrl := strings.Split(url, "?updateMask")[0] + ":upgrade"

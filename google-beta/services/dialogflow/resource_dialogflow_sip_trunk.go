@@ -482,7 +482,6 @@ func resourceDialogflowSipTrunkUpdate(d *schema.ResourceData, meta interface{}) 
 	if err != nil {
 		return err
 	}
-
 	location := d.Get("location").(string)
 	universeDomain := config.UniverseDomain
 

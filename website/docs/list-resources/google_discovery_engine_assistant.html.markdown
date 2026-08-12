@@ -36,7 +36,7 @@ list "google_discovery_engine_assistant" "all" {
     location = "..."
     collection_id = "..."
     engine_id = "..."
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -51,7 +51,7 @@ only be one of "global", "us" and "eu".
 
 * `engine_id` - (Required) The unique id of the engine.
 
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

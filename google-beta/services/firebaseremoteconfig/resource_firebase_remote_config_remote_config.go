@@ -652,7 +652,6 @@ func resourceFirebaseRemoteConfigRemoteConfigUpdate(d *schema.ResourceData, meta
 
 	log.Printf("[DEBUG] Updating RemoteConfig %q: %#v", d.Id(), obj)
 	headers := make(http.Header)
-
 	headers["If-Match"] = []string{"*"}
 
 	// err == nil indicates that the billing_project value was found

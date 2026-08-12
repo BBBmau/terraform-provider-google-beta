@@ -1362,7 +1362,6 @@ func resourcePrivatecaCertificateAuthorityUpdate(d *schema.ResourceData, meta in
 	if err != nil {
 		return err
 	}
-
 	if d.HasChange("subordinate_config") {
 		if d.Get("type").(string) != "SUBORDINATE" {
 			return fmt.Errorf("`subordinate_config` can only be configured on subordinate CA")

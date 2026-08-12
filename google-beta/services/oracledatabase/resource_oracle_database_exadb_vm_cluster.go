@@ -132,7 +132,7 @@ func ResourceOracleDatabaseExadbVmCluster() *schema.Resource {
 					},
 					"project": {
 						Type:              schema.TypeString,
-						RequiredForImport: true,
+						OptionalForImport: true,
 					},
 				}
 			},

@@ -136,7 +136,7 @@ func ResourceNetworkServicesTlsRoute() *schema.Resource {
 					},
 					"location": {
 						Type:              schema.TypeString,
-						OptionalForImport: true,
+						RequiredForImport: true,
 					},
 					"project": {
 						Type:              schema.TypeString,
@@ -150,6 +150,13 @@ func ResourceNetworkServicesTlsRoute() *schema.Resource {
 		},
 
 		Schema: map[string]*schema.Schema{
+			"location": {
+				Type:        schema.TypeString,
+				Required:    true,
+				ForceNew:    true,
+				Description: `Location (region) of the TLS Route.`,
+				Default:     "global",
+			},
 			"name": {
 				Type:        schema.TypeString,
 				Required:    true,
@@ -233,13 +240,6 @@ Each gateway reference should match the pattern: projects/*/locations/*/gateways
 				Elem: &schema.Schema{
 					Type: schema.TypeString,
 				},
-			},
-			"location": {
-				Type:        schema.TypeString,
-				Optional:    true,
-				ForceNew:    true,
-				Description: `Location (region) of the TLS Route.`,
-				Default:     "global",
 			},
 			"meshes": {
 				Type:     schema.TypeList,

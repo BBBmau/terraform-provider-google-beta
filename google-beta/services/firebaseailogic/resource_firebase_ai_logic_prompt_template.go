@@ -504,7 +504,6 @@ func resourceFirebaseAILogicPromptTemplateUpdate(d *schema.ResourceData, meta in
 	if err != nil {
 		return err
 	}
-
 	if d.Get("regional_propagation_disabled").(bool) {
 		url, err = transport_tpg.AddQueryParams(url, map[string]string{"regionalPropagationDisabled": "true"})
 		if err != nil {

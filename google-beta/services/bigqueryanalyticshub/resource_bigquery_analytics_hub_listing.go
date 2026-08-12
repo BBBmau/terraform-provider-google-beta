@@ -936,7 +936,6 @@ func resourceBigqueryAnalyticsHubListingUpdate(d *schema.ResourceData, meta inte
 	if err != nil {
 		return err
 	}
-
 	if d.HasChange("pubsub_topic.0.data_affinity_regions") {
 		// Split URL into base and query parts
 		parts := strings.SplitN(url, "?", 2)

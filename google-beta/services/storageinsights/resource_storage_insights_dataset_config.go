@@ -844,7 +844,6 @@ func resourceStorageInsightsDatasetConfigUpdate(d *schema.ResourceData, meta int
 
 	log.Printf("[DEBUG] Updating DatasetConfig %q: %#v", d.Id(), obj)
 	headers := make(http.Header)
-
 	updateMask := []string{}
 
 	if d.HasChange("include_newly_created_buckets") {

@@ -132,7 +132,7 @@ func ResourceOracleDatabaseGoldengateConnectionAssignment() *schema.Resource {
 					},
 					"project": {
 						Type:              schema.TypeString,
-						RequiredForImport: true,
+						OptionalForImport: true,
 					},
 				}
 			},

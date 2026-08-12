@@ -806,7 +806,6 @@ func resourceSecretManagerSecretUpdate(d *schema.ResourceData, meta interface{})
 	if err != nil {
 		return err
 	}
-
 	replicationProp, err := expandSecretManagerSecretReplication(d.Get("replication"), d, config)
 	if err != nil {
 		return err

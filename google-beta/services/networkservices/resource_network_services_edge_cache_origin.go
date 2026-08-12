@@ -138,6 +138,13 @@ func ResourceNetworkServicesEdgeCacheOrigin() *schema.Resource {
 		},
 
 		Schema: map[string]*schema.Schema{
+			"location": {
+				Type:        schema.TypeString,
+				Required:    true,
+				ForceNew:    true,
+				Description: `Location (region) of the EdgeCacheOrigin resource. Only the value 'global' is currently allowed.`,
+				Default:     "global",
+			},
 			"name": {
 				Type:     schema.TypeString,
 				Required: true,

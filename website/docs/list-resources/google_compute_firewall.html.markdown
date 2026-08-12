@@ -33,7 +33,7 @@ list "google_compute_firewall" "all" {
   provider = google
 
   config {
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -41,7 +41,7 @@ list "google_compute_firewall" "all" {
 Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

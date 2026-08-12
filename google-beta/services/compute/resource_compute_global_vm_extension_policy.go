@@ -673,7 +673,6 @@ func resourceComputeGlobalVmExtensionPolicyUpdate(d *schema.ResourceData, meta i
 
 	log.Printf("[DEBUG] Updating GlobalVmExtensionPolicy %q: %#v", d.Id(), obj)
 	headers := make(http.Header)
-
 	obj["name"] = d.Get("name").(string)
 
 	// err == nil indicates that the billing_project value was found

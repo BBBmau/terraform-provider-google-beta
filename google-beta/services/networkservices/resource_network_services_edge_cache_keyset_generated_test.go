@@ -61,6 +61,7 @@ func TestAccNetworkServicesEdgeCacheKeyset_networkServicesEdgeCacheKeysetBasicEx
 	randomSuffix := acctest.RandString(t, 10)
 
 	context := map[string]interface{}{
+		"location":      "global",
 		"resource_name": "tf-test-my-keyset" + randomSuffix,
 		"random_suffix": randomSuffix,
 	}
@@ -77,7 +78,7 @@ func TestAccNetworkServicesEdgeCacheKeyset_networkServicesEdgeCacheKeysetBasicEx
 				ResourceName:            "google_network_services_edge_cache_keyset.default",
 				ImportState:             true,
 				ImportStateVerify:       true,
-				ImportStateVerifyIgnore: []string{"labels", "name", "terraform_labels"},
+				ImportStateVerifyIgnore: []string{"labels", "location", "name", "terraform_labels"},
 			},
 			{
 				ResourceName:       "google_network_services_edge_cache_keyset.default",
@@ -130,7 +131,7 @@ func TestAccNetworkServicesEdgeCacheKeyset_networkServicesEdgeCacheKeysetDualTok
 				ResourceName:            "google_network_services_edge_cache_keyset.default",
 				ImportState:             true,
 				ImportStateVerify:       true,
-				ImportStateVerifyIgnore: []string{"labels", "name", "terraform_labels"},
+				ImportStateVerifyIgnore: []string{"labels", "location", "name", "terraform_labels"},
 			},
 			{
 				ResourceName:       "google_network_services_edge_cache_keyset.default",

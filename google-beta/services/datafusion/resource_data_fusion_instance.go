@@ -1002,7 +1002,6 @@ func resourceDataFusionInstanceUpdate(d *schema.ResourceData, meta interface{}) 
 
 	log.Printf("[DEBUG] Updating Instance %q: %#v", d.Id(), obj)
 	headers := make(http.Header)
-
 	updateMask := []string{}
 
 	if d.HasChange("enable_stackdriver_logging") {

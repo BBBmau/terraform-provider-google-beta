@@ -33,7 +33,7 @@ list "google_pubsub_subscription" "all" {
   provider = google
 
   config {
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -41,7 +41,7 @@ list "google_pubsub_subscription" "all" {
 Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

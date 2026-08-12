@@ -490,7 +490,6 @@ func resourceKMSCryptoKeyVersionUpdate(d *schema.ResourceData, meta interface{})
 	if err != nil {
 		return err
 	}
-
 	// The generated code does not support conditional update masks.
 	newUpdateMask := []string{}
 	if d.HasChange("state") {

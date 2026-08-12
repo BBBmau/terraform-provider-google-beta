@@ -502,7 +502,6 @@ func resourceDialogflowCXEnvironmentUpdate(d *schema.ResourceData, meta interfac
 	if err != nil {
 		return err
 	}
-
 	// extract location from the parent
 	location := ""
 

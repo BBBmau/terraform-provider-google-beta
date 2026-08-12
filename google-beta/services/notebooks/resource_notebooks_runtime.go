@@ -1070,7 +1070,6 @@ func resourceNotebooksRuntimeUpdate(d *schema.ResourceData, meta interface{}) er
 	if err != nil {
 		return err
 	}
-
 	// remove virtualMachine from updateMask
 	callSwitch := false
 	for i, field := range updateMask {

@@ -106,6 +106,10 @@ The following arguments are supported:
   (Required)
   Name of the EndpointPolicy resource.
 
+* `location` -
+  (Required)
+  Location (region) of the EndpointPolicy resource. Only the value 'global' is currently allowed.
+
 
 * `labels` -
   (Optional)

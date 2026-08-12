@@ -335,7 +335,6 @@ func resourceServiceDirectoryServiceUpdate(d *schema.ResourceData, meta interfac
 
 	log.Printf("[DEBUG] Updating Service %q: %#v", d.Id(), obj)
 	headers := make(http.Header)
-
 	updateMask := []string{}
 
 	if d.HasChange("metadata") {

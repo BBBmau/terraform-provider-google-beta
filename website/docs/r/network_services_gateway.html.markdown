@@ -241,6 +241,11 @@ The following arguments are supported:
   (Required)
   Name of the Gateway resource.
 
+* `location` -
+  (Required)
+  The location of the gateway.
+  The default value is `global`.
+
 
 * `labels` -
   (Optional)
@@ -329,11 +334,6 @@ The following arguments are supported:
   of the region where the gateway is located.
   This field is configurable only for gateways of type SECURE_WEB_GATEWAY.
 
-* `location` -
-  (Optional)
-  The location of the gateway.
-  The default value is `global`.
-
 * `project` - (Optional) The ID of the project in which the resource belongs.
     If it is not provided, the provider project is used.
 
@@ -395,7 +395,7 @@ In Terraform v1.12.0 and later, use an [`identity` block](https://developer.hash
 import {
   identity = {
     name = "<-required value->"
-    location = "<-optional value->"
+    location = "<-required value->"
     project = "<-optional value->"
   }
   to = google_network_services_gateway.default

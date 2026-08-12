@@ -344,6 +344,10 @@ The following arguments are supported:
   (Required)
   Name of the TlsRoute resource.
 
+* `location` -
+  (Required)
+  Location (region) of the TLS Route.
+
 
 * `description` -
   (Optional)
@@ -364,10 +368,6 @@ The following arguments are supported:
   (Optional)
   TargetProxies defines a list of target proxies this TlsRoute is attached to, as one of the routing rules to route the requests served by the load balancer.
   Each target proxy reference should match the pattern: projects/*/locations/global/targetTcpProxies/<target_tcp_proxy_name>
-
-* `location` -
-  (Optional)
-  Location (region) of the TLS Route.
 
 * `project` - (Optional) The ID of the project in which the resource belongs.
     If it is not provided, the provider project is used.
@@ -463,7 +463,7 @@ In Terraform v1.12.0 and later, use an [`identity` block](https://developer.hash
 import {
   identity = {
     name = "<-required value->"
-    location = "<-optional value->"
+    location = "<-required value->"
     project = "<-optional value->"
   }
   to = google_network_services_tls_route.default

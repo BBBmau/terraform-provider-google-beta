@@ -642,7 +642,6 @@ func resourceVPCAccessConnectorUpdate(d *schema.ResourceData, meta interface{}) 
 	if err != nil {
 		return err
 	}
-
 	if d.HasChange("min_instances") && !d.HasChange("max_instances") {
 		obj["maxInstances"] = d.Get("max_instances").(int)
 		updateMask = append(updateMask, "maxInstances", "minInstances")

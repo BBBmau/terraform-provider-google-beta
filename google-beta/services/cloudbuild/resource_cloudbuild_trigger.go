@@ -2079,7 +2079,6 @@ func resourceCloudBuildTriggerUpdate(d *schema.ResourceData, meta interface{}) e
 
 	log.Printf("[DEBUG] Updating Trigger %q: %#v", d.Id(), obj)
 	headers := make(http.Header)
-
 	obj["id"] = d.Get("trigger_id")
 
 	// err == nil indicates that the billing_project value was found

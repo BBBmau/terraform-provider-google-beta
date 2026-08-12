@@ -34,7 +34,7 @@ list "google_compute_subnetwork" "all" {
 
   config {
     region = "..." # Optional
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -44,7 +44,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 ## Configuration (`config` block)
 * `region` - (Optional) The GCP region for this subnetwork.
 
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

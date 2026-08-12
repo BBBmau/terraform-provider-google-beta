@@ -471,7 +471,6 @@ func resourceAccessContextManagerAuthorizedOrgsDescUpdate(d *schema.ResourceData
 
 	log.Printf("[DEBUG] Updating AuthorizedOrgsDesc %q: %#v", d.Id(), obj)
 	headers := make(http.Header)
-
 	updateMask := []string{}
 
 	if d.HasChange("orgs") {

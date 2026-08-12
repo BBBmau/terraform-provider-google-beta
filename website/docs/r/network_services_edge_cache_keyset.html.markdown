@@ -104,6 +104,10 @@ The following arguments are supported:
   The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
   and all following characters must be a dash, underscore, letter or digit.
 
+* `location` -
+  (Required)
+  Location (region) of the EdgeCacheKeyset resource. Only the value 'global' is currently allowed.
+
 
 * `description` -
   (Optional)

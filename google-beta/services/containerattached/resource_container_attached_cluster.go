@@ -941,7 +941,6 @@ func resourceContainerAttachedClusterUpdate(d *schema.ResourceData, meta interfa
 	if err != nil {
 		return err
 	}
-
 	// The generated code sets the wrong masks for the following fields.
 	newUpdateMask := []string{}
 	if d.HasChange("authorization.0.admin_users") {

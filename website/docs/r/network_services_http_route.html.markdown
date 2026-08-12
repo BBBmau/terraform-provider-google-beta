@@ -273,6 +273,10 @@ The following arguments are supported:
   (Required)
   Name of the HttpRoute resource.
 
+* `location` -
+  (Required)
+  Location (region) of the HttpRoute resource. Only the value 'global' is currently allowed.
+
 
 * `labels` -
   (Optional)
