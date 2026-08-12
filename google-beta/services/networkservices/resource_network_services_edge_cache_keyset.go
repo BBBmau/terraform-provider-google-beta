@@ -160,6 +160,13 @@ and all following characters must be a dash, underscore, letter or digit.`,
 Please refer to the field 'effective_labels' for all of the labels present on the resource.`,
 				Elem: &schema.Schema{Type: schema.TypeString},
 			},
+			"location": {
+				Type:        schema.TypeString,
+				Optional:    true,
+				ForceNew:    true,
+				Description: `Location (region) of the EdgeCacheKeyset resource. Only the value 'global' is currently allowed.`,
+				Default:     "global",
+			},
 			"public_key": {
 				Type:     schema.TypeList,
 				Optional: true,

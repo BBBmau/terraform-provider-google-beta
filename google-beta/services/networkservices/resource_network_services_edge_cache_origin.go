@@ -233,6 +233,13 @@ You must specify exactly one FlexShieldingRegion. Possible values: ["AFRICA_SOUT
 Please refer to the field 'effective_labels' for all of the labels present on the resource.`,
 				Elem: &schema.Schema{Type: schema.TypeString},
 			},
+			"location": {
+				Type:        schema.TypeString,
+				Optional:    true,
+				ForceNew:    true,
+				Description: `Location (region) of the EdgeCacheOrigin resource. Only the value 'global' is currently allowed.`,
+				Default:     "global",
+			},
 			"max_attempts": {
 				Type:         schema.TypeInt,
 				Optional:     true,

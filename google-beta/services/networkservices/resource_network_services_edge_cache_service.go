@@ -1059,6 +1059,13 @@ Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attac
 Please refer to the field 'effective_labels' for all of the labels present on the resource.`,
 				Elem: &schema.Schema{Type: schema.TypeString},
 			},
+			"location": {
+				Type:        schema.TypeString,
+				Optional:    true,
+				ForceNew:    true,
+				Description: `Location (region) of the EdgeCacheService resource. Only the value 'global' is currently allowed.`,
+				Default:     "global",
+			},
 			"log_config": {
 				Type:        schema.TypeList,
 				Optional:    true,
