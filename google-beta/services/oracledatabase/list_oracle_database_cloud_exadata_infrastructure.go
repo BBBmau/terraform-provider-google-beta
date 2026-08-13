@@ -56,7 +56,7 @@ func NewOracleDatabaseCloudExadataInfrastructureListResource() list.ListResource
 	listR.SDKv2Resource = ResourceOracleDatabaseCloudExadataInfrastructure()
 	listR.ListConfigFields = []tpgresource.ListConfigField{
 		{Name: "location", Kind: tpgresource.ListConfigKindString, Optional: false},
-		{Name: "project", Kind: tpgresource.ListConfigKindString, Optional: false},
+		{Name: "project", Kind: tpgresource.ListConfigKindString, Optional: true},
 	}
 	return listR
 }

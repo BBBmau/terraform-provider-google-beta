@@ -56,7 +56,7 @@ func NewOracleDatabaseGoldengateConnectionAssignmentListResource() list.ListReso
 	listR.SDKv2Resource = ResourceOracleDatabaseGoldengateConnectionAssignment()
 	listR.ListConfigFields = []tpgresource.ListConfigField{
 		{Name: "location", Kind: tpgresource.ListConfigKindString, Optional: false},
-		{Name: "project", Kind: tpgresource.ListConfigKindString, Optional: false},
+		{Name: "project", Kind: tpgresource.ListConfigKindString, Optional: true},
 	}
 	return listR
 }

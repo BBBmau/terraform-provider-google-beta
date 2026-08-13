@@ -56,7 +56,7 @@ func NewOracleDatabaseDbSystemListResource() list.ListResource {
 	listR.SDKv2Resource = ResourceOracleDatabaseDbSystem()
 	listR.ListConfigFields = []tpgresource.ListConfigField{
 		{Name: "location", Kind: tpgresource.ListConfigKindString, Optional: false},
-		{Name: "project", Kind: tpgresource.ListConfigKindString, Optional: false},
+		{Name: "project", Kind: tpgresource.ListConfigKindString, Optional: true},
 	}
 	return listR
 }

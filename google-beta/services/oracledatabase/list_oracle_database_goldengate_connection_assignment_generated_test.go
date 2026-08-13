@@ -72,7 +72,6 @@ func TestAccOracleDatabaseGoldengateConnectionAssignmentListQuery_generated(t *t
 					),
 					listScope.Capture(map[string]string{
 						"location": "google_oracle_database_goldengate_connection_assignment.assignment",
-						"project":  "google_oracle_database_goldengate_connection_assignment.assignment",
 					}),
 				),
 			},
@@ -96,13 +95,11 @@ func TestAccOracleDatabaseGoldengateConnectionAssignmentListQuery_generated(t *t
 func testAccOracleDatabaseGoldengateConnectionAssignment_oracledatabaseGoldengateConnectionAssignmentFullExampleListQuery(context map[string]interface{}) string {
 	return acctest.Nprintf(`
 variable "location" { type = string }
-variable "project" { type = string }
 list "google_oracle_database_goldengate_connection_assignment" "list_query" {
     provider = google
 	limit = 10000
     config {
         location = var.location
-        project = var.project
     }
 }
 `, context)

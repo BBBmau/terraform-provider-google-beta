@@ -70,7 +70,6 @@ func TestAccOracleDatabaseCloudExadataInfrastructureListQuery_generated(t *testi
 					),
 					listScope.Capture(map[string]string{
 						"location": "google_oracle_database_cloud_exadata_infrastructure.my-cloud-exadata",
-						"project":  "google_oracle_database_cloud_exadata_infrastructure.my-cloud-exadata",
 					}),
 				),
 			},
@@ -94,13 +93,11 @@ func TestAccOracleDatabaseCloudExadataInfrastructureListQuery_generated(t *testi
 func testAccOracleDatabaseCloudExadataInfrastructure_oracledatabaseCloudExadataInfrastructureBasicExampleListQuery(context map[string]interface{}) string {
 	return acctest.Nprintf(`
 variable "location" { type = string }
-variable "project" { type = string }
 list "google_oracle_database_cloud_exadata_infrastructure" "list_query" {
     provider = google
 	limit = 10000
     config {
         location = var.location
-        project = var.project
     }
 }
 `, context)

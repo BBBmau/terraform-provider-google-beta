@@ -74,7 +74,6 @@ func TestAccOracleDatabaseDbSystemListQuery_generated(t *testing.T) {
 					),
 					listScope.Capture(map[string]string{
 						"location": "google_oracle_database_db_system.my_db_system",
-						"project":  "google_oracle_database_db_system.my_db_system",
 					}),
 				),
 			},
@@ -98,13 +97,11 @@ func TestAccOracleDatabaseDbSystemListQuery_generated(t *testing.T) {
 func testAccOracleDatabaseDbSystem_oracledatabaseDbSystemBasicExampleListQuery(context map[string]interface{}) string {
 	return acctest.Nprintf(`
 variable "location" { type = string }
-variable "project" { type = string }
 list "google_oracle_database_db_system" "list_query" {
     provider = google
 	limit = 10000
     config {
         location = var.location
-        project = var.project
     }
 }
 `, context)
