@@ -34,7 +34,7 @@ list "google_oracle_database_cloud_exadata_infrastructure" "all" {
 
   config {
     location = "..."
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -43,7 +43,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
 * `location` - (Required) Resource ID segment making up resource `name`. See documentation for resource type `oracledatabase.googleapis.com/DbServer`. 
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

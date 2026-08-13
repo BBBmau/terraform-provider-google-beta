@@ -36,7 +36,7 @@ list "google_discovery_engine_control" "all" {
     location = "..."
     collection_id = "..." # Optional
     engine_id = "..."
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -49,7 +49,7 @@ only be one of "global", "us" and "eu".
 
 * `collection_id` - (Optional) The collection ID. Currently only accepts "default_collection".
 * `engine_id` - (Required) The engine to add the control to.
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

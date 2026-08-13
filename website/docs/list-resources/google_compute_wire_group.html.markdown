@@ -34,7 +34,7 @@ list "google_compute_wire_group" "all" {
 
   config {
     cross_site_network = "..."
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -43,7 +43,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
 * `cross_site_network` - (Required) Required cross site network to which wire group belongs.
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

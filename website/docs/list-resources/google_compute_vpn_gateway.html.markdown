@@ -34,7 +34,7 @@ list "google_compute_vpn_gateway" "all" {
 
   config {
     region = "..." # Optional
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -44,7 +44,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 ## Configuration (`config` block)
 * `region` - (Optional) The region this gateway should sit in.
 
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 
