@@ -60,9 +60,9 @@ func TestAccOracleDatabaseDbSystem_oracledatabaseDbSystemBasicExample(t *testing
 	randomSuffix := acctest.RandString(t, 10)
 
 	context := map[string]interface{}{
-		"database_id":         fmt.Sprintf("ofake-tf-test-database-basic-%s", randomSuffix),
-		"db_system_id":        fmt.Sprintf("ofake-tf-test-dbsystem-basic-%s", randomSuffix),
-		"db_unique_name":      fmt.Sprintf("db%s", randomSuffix),
+		"database_id":         fmt.Sprintf("ofake-tf-test-database-basic-%s", acctest.RandString(t, 10)),
+		"db_system_id":        fmt.Sprintf("ofake-tf-test-dbsystem-basic-%s", acctest.RandString(t, 10)),
+		"db_unique_name":      fmt.Sprintf("db%s", acctest.RandString(t, 10)),
 		"deletion_protection": false,
 		"odb_network":         "projects/oci-terraform-testing-prod/locations/europe-west2/odbNetworks/tf-test-permanent-odbnetwork",
 		"odb_subnet":          "projects/oci-terraform-testing-prod/locations/europe-west2/odbNetworks/tf-test-permanent-odbnetwork/odbSubnets/tf-test-permanent-client-odbsubnet",
@@ -137,13 +137,13 @@ func TestAccOracleDatabaseDbSystem_oracledatabaseDbSystemFullExample(t *testing.
 	randomSuffix := acctest.RandString(t, 10)
 
 	context := map[string]interface{}{
-		"database_id":           fmt.Sprintf("ofake-tf-test-database-basic-%s", randomSuffix),
-		"db_system_id":          fmt.Sprintf("ofake-tf-test-dbsystem-basic-%s", randomSuffix),
-		"db_unique_name":        fmt.Sprintf("db%s", randomSuffix),
+		"database_id":           fmt.Sprintf("ofake-tf-test-database-basic-%s", acctest.RandString(t, 10)),
+		"db_system_id":          fmt.Sprintf("ofake-tf-test-dbsystem-basic-%s", acctest.RandString(t, 10)),
+		"db_unique_name":        fmt.Sprintf("db%s", acctest.RandString(t, 10)),
 		"deletion_protection":   false,
 		"odb_network":           "projects/oci-terraform-testing-prod/locations/europe-west2/odbNetworks/tf-test-permanent-odbnetwork",
 		"odb_subnet":            "projects/oci-terraform-testing-prod/locations/europe-west2/odbNetworks/tf-test-permanent-odbnetwork/odbSubnets/tf-test-permanent-client-odbsubnet",
-		"pluggable_database_id": fmt.Sprintf("ofake-tf-test-mypdb-%s", randomSuffix),
+		"pluggable_database_id": fmt.Sprintf("ofake-tf-test-mypdb-%s", acctest.RandString(t, 10)),
 		"project":               "oci-terraform-testing-prod",
 		"random_suffix":         randomSuffix,
 	}

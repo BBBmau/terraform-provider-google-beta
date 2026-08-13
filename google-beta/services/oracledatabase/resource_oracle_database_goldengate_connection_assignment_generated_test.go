@@ -61,7 +61,7 @@ func TestAccOracleDatabaseGoldengateConnectionAssignment_oracledatabaseGoldengat
 
 	context := map[string]interface{}{
 		"deletion_protection":                 false,
-		"goldengate_connection_assignment_id": fmt.Sprintf("tf-gcca-%s", randomSuffix),
+		"goldengate_connection_assignment_id": fmt.Sprintf("tf-gcca-%s", acctest.RandString(t, 10)),
 		"goldengate_connection_id":            "tf-test-permanent-connection",
 		"goldengate_deployment_id":            "tf-test-permanent-deployment",
 		"project":                             "oci-terraform-testing-prod",
