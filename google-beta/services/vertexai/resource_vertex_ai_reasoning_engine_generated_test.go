@@ -31,7 +31,7 @@ import (
 
 	"github.com/hashicorp/terraform-provider-google-beta/google-beta/acctest"
 	"github.com/hashicorp/terraform-provider-google-beta/google-beta/envvar"
-	"github.com/hashicorp/terraform-provider-google-beta/google-beta/services/kms"
+	kms "github.com/hashicorp/terraform-provider-google-beta/google-beta/services/kms"
 	"github.com/hashicorp/terraform-provider-google-beta/google-beta/services/resourcemanager"
 	_ "github.com/hashicorp/terraform-provider-google-beta/google-beta/services/secretmanager"
 	_ "github.com/hashicorp/terraform-provider-google-beta/google-beta/services/storage"
@@ -329,7 +329,6 @@ resource "google_vertex_ai_reasoning_engine" "reasoning_engine" {
 }
 
 func TestAccVertexAIReasoningEngine_vertexAiReasoningEngineByocExample(t *testing.T) {
-	acctest.SkipTestUntil(t, "2026-05-15")
 	acctest.SkipIfVcr(t)
 	t.Parallel()
 
@@ -374,6 +373,7 @@ resource "google_vertex_ai_reasoning_engine" "reasoning_engine" {
   spec {
     container_spec {
       image_uri = "us-central1-docker.pkg.dev/${data.google_project.project.project_id}/vertex-byoc/byoc-agent:latest" # image path
+      port      = 8080
     }
   }
 
