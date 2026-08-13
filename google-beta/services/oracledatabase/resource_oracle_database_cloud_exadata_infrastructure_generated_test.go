@@ -60,7 +60,7 @@ func TestAccOracleDatabaseCloudExadataInfrastructure_oracledatabaseCloudExadataI
 	randomSuffix := acctest.RandString(t, 10)
 
 	context := map[string]interface{}{
-		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-basic-%s", acctest.RandString(t, 10)),
+		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-basic-%s", randomSuffix),
 		"deletion_protection":             false,
 		"project":                         "oci-terraform-testing-prod",
 		"random_suffix":                   randomSuffix,
@@ -114,7 +114,7 @@ func TestAccOracleDatabaseCloudExadataInfrastructure_oracledatabaseCloudExadataI
 	randomSuffix := acctest.RandString(t, 10)
 
 	context := map[string]interface{}{
-		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-full-%s", acctest.RandString(t, 10)),
+		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-full-%s", randomSuffix),
 		"deletion_protection":             false,
 		"project":                         "oci-terraform-testing-prod",
 		"random_suffix":                   randomSuffix,

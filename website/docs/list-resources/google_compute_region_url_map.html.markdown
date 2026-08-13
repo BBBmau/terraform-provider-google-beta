@@ -34,7 +34,7 @@ list "google_compute_region_url_map" "all" {
 
   config {
     region = "..." # Optional
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -45,7 +45,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 * `region` - (Optional) The Region in which the url map should reside.
 If it is not provided, the provider region is used.
 
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

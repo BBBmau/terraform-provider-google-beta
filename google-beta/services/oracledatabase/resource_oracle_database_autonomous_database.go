@@ -132,7 +132,7 @@ func ResourceOracleDatabaseAutonomousDatabase() *schema.Resource {
 					},
 					"project": {
 						Type:              schema.TypeString,
-						RequiredForImport: true,
+						OptionalForImport: true,
 					},
 				}
 			},

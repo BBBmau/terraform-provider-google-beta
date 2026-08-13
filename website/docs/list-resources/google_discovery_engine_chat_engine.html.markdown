@@ -35,7 +35,7 @@ list "google_discovery_engine_chat_engine" "all" {
   config {
     collection_id = "..."
     location = "..."
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -47,7 +47,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 * `location` - (Required) Location.
 
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

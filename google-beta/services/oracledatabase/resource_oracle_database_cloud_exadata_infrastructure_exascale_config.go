@@ -130,7 +130,7 @@ func ResourceOracleDatabaseCloudExadataInfrastructureExascaleConfig() *schema.Re
 					},
 					"project": {
 						Type:              schema.TypeString,
-						RequiredForImport: true,
+						OptionalForImport: true,
 					},
 				}
 			},

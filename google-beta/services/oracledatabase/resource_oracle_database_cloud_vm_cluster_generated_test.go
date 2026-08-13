@@ -61,8 +61,8 @@ func TestAccOracleDatabaseCloudVmCluster_oracledatabaseCloudVmclusterBasicExampl
 	randomSuffix := acctest.RandString(t, 10)
 
 	context := map[string]interface{}{
-		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-for-vmcluster-basic-%s", acctest.RandString(t, 10)),
-		"cloud_vm_cluster_id":             fmt.Sprintf("ofake-tf-test-vmcluster-basic-%s", acctest.RandString(t, 10)),
+		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-for-vmcluster-basic-%s", randomSuffix),
+		"cloud_vm_cluster_id":             fmt.Sprintf("ofake-tf-test-vmcluster-basic-%s", randomSuffix),
 		"deletion_protection":             false,
 		"project":                         "oci-terraform-testing-prod",
 		"random_suffix":                   randomSuffix,
@@ -142,8 +142,8 @@ func TestAccOracleDatabaseCloudVmCluster_oracledatabaseCloudVmclusterOdbnetworkE
 
 	context := map[string]interface{}{
 		"backup_odb_subnet":               "projects/oci-terraform-testing-prod/locations/europe-west2/odbNetworks/tf-test-permanent-odbnetwork/odbSubnets/tf-test-permanent-backup-odbsubnet",
-		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-for-vmcluster-odbnetwork-%s", acctest.RandString(t, 10)),
-		"cloud_vm_cluster_id":             fmt.Sprintf("ofake-tf-test-vmcluster-odbnetwork-%s", acctest.RandString(t, 10)),
+		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-for-vmcluster-odbnetwork-%s", randomSuffix),
+		"cloud_vm_cluster_id":             fmt.Sprintf("ofake-tf-test-vmcluster-odbnetwork-%s", randomSuffix),
 		"deletion_protection":             false,
 		"odb_network":                     "projects/oci-terraform-testing-prod/locations/europe-west2/odbNetworks/tf-test-permanent-odbnetwork",
 		"odb_subnet":                      "projects/oci-terraform-testing-prod/locations/europe-west2/odbNetworks/tf-test-permanent-odbnetwork/odbSubnets/tf-test-permanent-client-odbsubnet",
@@ -219,8 +219,8 @@ func TestAccOracleDatabaseCloudVmCluster_oracledatabaseCloudVmclusterFullExample
 	randomSuffix := acctest.RandString(t, 10)
 
 	context := map[string]interface{}{
-		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-for-vmcluster-full-%s", acctest.RandString(t, 10)),
-		"cloud_vm_cluster_id":             fmt.Sprintf("ofake-tf-test-vmcluster-full-%s", acctest.RandString(t, 10)),
+		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-for-vmcluster-full-%s", randomSuffix),
+		"cloud_vm_cluster_id":             fmt.Sprintf("ofake-tf-test-vmcluster-full-%s", randomSuffix),
 		"deletion_protection":             false,
 		"project":                         "oci-terraform-testing-prod",
 		"random_suffix":                   randomSuffix,
@@ -326,10 +326,10 @@ func TestAccOracleDatabaseCloudVmCluster_oracledatabaseCloudVmclusterExascaleExa
 	randomSuffix := acctest.RandString(t, 10)
 
 	context := map[string]interface{}{
-		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-for-vmcluster-exascale-%s", acctest.RandString(t, 10)),
-		"cloud_vm_cluster_id":             fmt.Sprintf("ofake-tf-test-vmcluster-exascale-%s", acctest.RandString(t, 10)),
+		"cloud_exadata_infrastructure_id": fmt.Sprintf("ofake-tf-test-exadata-for-vmcluster-exascale-%s", randomSuffix),
+		"cloud_vm_cluster_id":             fmt.Sprintf("ofake-tf-test-vmcluster-exascale-%s", randomSuffix),
 		"deletion_protection":             false,
-		"exascale_db_storage_vault_id":    fmt.Sprintf("ofake-tf-test-vault-for-vmcluster-exascale-%s", acctest.RandString(t, 10)),
+		"exascale_db_storage_vault_id":    fmt.Sprintf("ofake-tf-test-vault-for-vmcluster-exascale-%s", randomSuffix),
 		"project":                         "oci-terraform-testing-prod",
 		"random_suffix":                   randomSuffix,
 	}

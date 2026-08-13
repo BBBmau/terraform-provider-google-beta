@@ -34,7 +34,7 @@ list "google_compute_region_backend_bucket" "all" {
 
   config {
     region = "..."
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -44,7 +44,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 ## Configuration (`config` block)
 * `region` - (Required) The region where the backend bucket resides.
 
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

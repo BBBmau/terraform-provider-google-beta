@@ -62,7 +62,7 @@ func TestAccOracleDatabaseAutonomousDatabase_oracledatabaseAutonomousDatabaseBas
 
 	context := map[string]interface{}{
 		"autonomous_database_id": "tf-test-my-instance" + randomSuffix,
-		"database_name":          fmt.Sprintf("tftestdatabase%s", acctest.RandString(t, 10)),
+		"database_name":          fmt.Sprintf("tftestdatabase%s", randomSuffix),
 		"deletion_protection":    false,
 		"project":                "oci-terraform-testing-prod",
 		"random_suffix":          randomSuffix,
@@ -127,9 +127,9 @@ func TestAccOracleDatabaseAutonomousDatabase_oracledatabaseAutonomousDatabaseFul
 
 	context := map[string]interface{}{
 		"autonomous_database_id": "tf-test-my-instance" + randomSuffix,
-		"database_name":          fmt.Sprintf("tftestdatabase%s", acctest.RandString(t, 10)),
+		"database_name":          fmt.Sprintf("tftestdatabase%s", randomSuffix),
 		"deletion_protection":    false,
-		"endpoint_name":          fmt.Sprintf("tftestendpoint%s", acctest.RandString(t, 10)),
+		"endpoint_name":          fmt.Sprintf("tftestendpoint%s", randomSuffix),
 		"odb_network":            "projects/oci-terraform-testing-prod/locations/us-east4/odbNetworks/tf-test-permanent-odbnetwork",
 		"odb_subnet":             "projects/oci-terraform-testing-prod/locations/us-east4/odbNetworks/tf-test-permanent-odbnetwork/odbSubnets/tf-test-permanent-client-odbsubnet",
 		"project":                "oci-terraform-testing-prod",
@@ -212,7 +212,7 @@ func TestAccOracleDatabaseAutonomousDatabase_oracledatabaseAutonomousDatabaseOdb
 
 	context := map[string]interface{}{
 		"autonomous_database_id": "tf-test-my-instance" + randomSuffix,
-		"database_name":          fmt.Sprintf("tftestdatabase%s", acctest.RandString(t, 10)),
+		"database_name":          fmt.Sprintf("tftestdatabase%s", randomSuffix),
 		"deletion_protection":    false,
 		"odb_network":            "projects/oci-terraform-testing-prod/locations/europe-west2/odbNetworks/tf-test-permanent-odbnetwork",
 		"odb_subnet":             "projects/oci-terraform-testing-prod/locations/europe-west2/odbNetworks/tf-test-permanent-odbnetwork/odbSubnets/tf-test-permanent-client-odbsubnet",
@@ -273,7 +273,7 @@ func TestAccOracleDatabaseAutonomousDatabase_oracledatabaseAutonomousDatabasePub
 
 	context := map[string]interface{}{
 		"autonomous_database_id": "tf-test-my-instance" + randomSuffix,
-		"database_name":          fmt.Sprintf("tftestdatabase%s", acctest.RandString(t, 10)),
+		"database_name":          fmt.Sprintf("tftestdatabase%s", randomSuffix),
 		"deletion_protection":    false,
 		"project":                "oci-terraform-testing-prod",
 		"random_suffix":          randomSuffix,
@@ -331,7 +331,7 @@ func TestAccOracleDatabaseAutonomousDatabase_oracledatabaseAutonomousDatabaseDis
 
 	context := map[string]interface{}{
 		"autonomous_database_id":    "tf-test-my-instance" + randomSuffix,
-		"database_name":             fmt.Sprintf("tftestdatabase%s", acctest.RandString(t, 10)),
+		"database_name":             fmt.Sprintf("tftestdatabase%s", randomSuffix),
 		"deletion_protection":       false,
 		"enable_backup_replication": true,
 		"location":                  "us-west3",

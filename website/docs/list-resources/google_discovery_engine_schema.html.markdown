@@ -35,7 +35,7 @@ list "google_discovery_engine_schema" "all" {
   config {
     location = "..."
     data_store_id = "..."
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -48,7 +48,7 @@ only be one of "global", "us" and "eu".
 
 * `data_store_id` - (Required) The unique id of the data store.
 
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 

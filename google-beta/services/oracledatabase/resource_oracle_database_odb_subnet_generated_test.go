@@ -63,7 +63,7 @@ func TestAccOracleDatabaseOdbSubnet_oracledatabaseOdbsubnetExample(t *testing.T)
 	context := map[string]interface{}{
 		"deletion_protection": false,
 		"odb_network_id":      "tf-test-permanent-odbnetwork",
-		"odb_subnet_id":       fmt.Sprintf("tf-test-odbsubnet-%s", acctest.RandString(t, 10)),
+		"odb_subnet_id":       fmt.Sprintf("tf-test-odbsubnet-%s", randomSuffix),
 		"project":             "oci-terraform-testing-prod",
 		"random_suffix":       randomSuffix,
 	}

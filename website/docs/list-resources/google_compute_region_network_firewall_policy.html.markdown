@@ -34,7 +34,7 @@ list "google_compute_region_network_firewall_policy" "all" {
 
   config {
     region = "..." # Optional
-    project = "..."
+    project = "..." # Optional
   }
 }
 ```
@@ -43,7 +43,7 @@ Run `terraform query` from the directory that contains the `.tfquery.hcl` file.
 
 ## Configuration (`config` block)
 * `region` - (Optional) The region of this resource.
-* `project` - (Required)
+* `project` - (Optional)
 
 ## Results
 
