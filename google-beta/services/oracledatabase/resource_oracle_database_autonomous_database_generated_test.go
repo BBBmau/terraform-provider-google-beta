@@ -120,6 +120,7 @@ data "google_compute_network" "default" {
 }
 
 func TestAccOracleDatabaseAutonomousDatabase_oracledatabaseAutonomousDatabaseFullExample(t *testing.T) {
+	acctest.SkipIfVcr(t)
 	t.Parallel()
 
 	randomSuffix := acctest.RandString(t, 10)
