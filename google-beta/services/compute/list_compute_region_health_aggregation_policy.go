@@ -136,8 +136,7 @@ func ListComputeRegionHealthAggregationPolicys(config *transport_tpg.Config,
 	if err != nil {
 		return err
 	}
-
-	billingProject := ""
+	billingProject := project
 	if bp, err := tpgresource.GetBillingProject(resourceData, config); err == nil {
 		billingProject = bp
 	}
@@ -167,10 +166,6 @@ func ListComputeRegionHealthAggregationPolicys(config *transport_tpg.Config,
 				if err := d.Set("name", v); err != nil {
 					return fmt.Errorf("error setting name: %w", err)
 				}
-			}
-			project := ""
-			if p, err := tpgresource.GetProject(d, config); err == nil {
-				project = p
 			}
 			if err = ResourceComputeRegionHealthAggregationPolicyFlatten(d, config, res, config, project, userAgent, billingProject, url, headers); err != nil {
 				return err

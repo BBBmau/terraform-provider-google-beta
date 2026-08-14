@@ -136,8 +136,7 @@ func ListBigQueryDatasetAccesss(config *transport_tpg.Config,
 	if err != nil {
 		return err
 	}
-
-	billingProject := ""
+	billingProject := project
 	if bp, err := tpgresource.GetBillingProject(resourceData, config); err == nil {
 		billingProject = bp
 	}
@@ -169,10 +168,6 @@ func ListBigQueryDatasetAccesss(config *transport_tpg.Config,
 				if err := d.Set("dataset_id", v); err != nil {
 					return fmt.Errorf("error setting dataset_id: %w", err)
 				}
-			}
-			project := ""
-			if p, err := tpgresource.GetProject(d, config); err == nil {
-				project = p
 			}
 			if err = ResourceBigQueryDatasetAccessFlatten(d, config, res, config, project, userAgent, billingProject, url, headers); err != nil {
 				return err
